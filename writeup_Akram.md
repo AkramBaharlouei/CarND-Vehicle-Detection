@@ -71,6 +71,8 @@ Sliding window is implemented in cell 5. different combination of window size, o
 
 As suggested in lecture, tried a more efficient method for doing the sliding window approach, one that allows us to only have to extract the Hog features once. This implemented in "find_cars" method which only has to extract hog features once and then can be sub-sampled to get all of its overlaying windows. Each window is defined by a scaling factor where a scale of 1 would result in a window that's 8 x 8 cells then the overlap of each window is in terms of the cell distance. This means that a cells_per_step = 2 would result in a search window overlap of 75%. Then by applying heatmap and threshold the overlapping windows added up and false detection removed as seen below: 
 ![alt text][image4]
+
+
 ---
 
 ### Video Implementation
@@ -79,7 +81,9 @@ Applied  "find-car" function multiple times with different scale values and vert
 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result][video1][video2]
+
+Here's a [link to my video result][video1]
+[video2]
 
 
 #### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
